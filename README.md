@@ -32,3 +32,25 @@ $ git commit --amend -m "chore: Create third and fourth files"
  create mode 100644 README.md
  create mode 100644 test4.md
 ```
+
+### Editing Commit History
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git rebase -i HEAD~6
+[detached HEAD 86ef08b] chore: Create second file
+ Date: Fri Feb 28 12:19:34 2025 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git push origin main --force-with-lease
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (13/13), done.
+Writing objects: 100% (13/13), 1.74 KiB | 444.00 KiB/s, done.
+Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+ create mode 100644 test2.md
+Successfully rebased and updated refs/heads/main.
+```
