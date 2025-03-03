@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 # Git challenges
 ## Part1: Refining Git History
 ### Missing File Fix
@@ -56,7 +55,6 @@ Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
  create mode 100644 test2.md
 Successfully rebased and updated refs/heads/main.
 ```
-<<<<<<< HEAD
 
 ### Keeping History Tidy - Squashing Commits
 ```bash
@@ -81,6 +79,4 @@ To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
 
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 ```
->>>>>>> 33703c9 (restore README.md from previous commit)
-=======
->>>>>>> b58b1b3 (Editing Commit History)
+
