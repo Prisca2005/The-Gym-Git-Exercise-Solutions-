@@ -344,5 +344,165 @@ f385a98 Restored README.md from previous commit
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
 $
 ```
+### Visualizing Commit History (Bonus)
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$ git log --graph
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+|     Dropping a Commit
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origin/ft/branch)
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+|
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origin/ft/branch)
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:56:24 2025 +0200
+|
+|     feat: Cherry-Picking Commits
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+|
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+* commit 248ba26839c8615838ba71d95907fdb8af9422a5
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:45:00 2025 +0200
+|
+|     feat: Advanced Squashing
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origin/ft/branch)
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:56:24 2025 +0200
+|
+|     feat: Cherry-Picking Commits
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+|
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+* commit 248ba26839c8615838ba71d95907fdb8af9422a5
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:45:00 2025 +0200
+|
+|     feat: Advanced Squashing
+|
+* commit 1eb24ad5a6882df3b13ab69bb265e250a2e79208
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:31:05 2025 +0200
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origi
+n/ft/branch)
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:56:24 2025 +0200    
+|
+|     feat: Cherry-Picking Commits
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+| 
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+* commit 248ba26839c8615838ba71d95907fdb8af9422a5
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:45:00 2025 +0200
+|
+|     feat: Advanced Squashing
+|
+* commit 1eb24ad5a6882df3b13ab69bb265e250a2e79208
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:31:05 2025 +0200
+|
+|     feat:Splitting a Commit
+|
+* commit 8c4ce62988424f1d1c0a79fc9652c0fe57649459
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Mon Mar 3 11:56:52 2025 +0200
+|
+|     chore: split the commit message
+|
+* commit 7622a76a8eda8ba0f3bdf9ae1049f7315053547a
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:08:23 2025 +0200
+|
+|     Restore README.md content
+|
+* commit f385a98fa0ae6598238013acea105899230c801f
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Fri Feb 28 14:39:18 2025 +0200
+|
+|     Restored README.md from previous commit
+|
+* commit 726471c5a773239d03050fcab1aae898dc38907d
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Fri Feb 28 12:34:59 2025 +0200
+|
+|     feat: 1.missing file fix
+|
+* commit 1d6cf135bda7fae60edb7dc2c814d441ee0a8b20
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 16:39:25 2025 +0200
+|
+|     Create third and fourth files
+|
+* commit 4528dfba1c85f628d8b5b421895a2ae8a9cf59e7
+  Author: prisca <priscamasereli@gmail.com>
+  Date:   Fri Feb 28 12:19:34 2025 +0200
 
+      chore: Combine initial and second files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$ git log --graph --oneline --all
+* e7cbfba (HEAD -> ft/branch, origin/ft/branch) feat: Cherry-Picking Commits
+* e957c98 Implemented test 5
+| * ef1f445 (origin/main, main) Implemented test 5
+|/
+* a76c677 Dropping a Commit
+* 248ba26 feat: Advanced Squashing
+* 1eb24ad feat:Splitting a Commit
+* 8c4ce62 chore: split the commit message
+* 7622a76 Restore README.md content
+* f385a98 Restored README.md from previous commit
+* 726471c feat: 1.missing file fix
+* 1d6cf13 Create third and fourth files
+* 4528dfb chore: Combine initial and second files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$
+```
 
