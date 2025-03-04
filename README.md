@@ -552,4 +552,25 @@ $ git branch
   main
 
 ```
+### Working on the Feature Branch
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ touch feature.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ echo "This is the core functionality for the new feature" > feature.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ git add feature.txt
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF 
+the next time Git touches it
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 75eef11] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+```
 
