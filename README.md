@@ -146,7 +146,67 @@ f385a98 Restored README.md from previous commit
 1d6cf13 Create third and fourth files
 4528dfb chore: Combine initial and second files
 ```
+### Dropping a commit
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)                                     learning (main)        
+$ git add unwanted.txt
 
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git commit -m "Unwanted commit"
+[main 5c45fc0] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+
+ user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 294 bytes | 294.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+   248ba26..5c45fc0  main -> main
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git log --oneline
+5c45fc0 (HEAD -> main, origin/main) Unwanted commit 
+248ba26 feat: Advanced Squashing
+1eb24ad feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit     
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files     
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/main.   
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git log --oneline
+248ba26 (HEAD -> main) feat: Advanced Squashing
+1eb24ad feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit     
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files     
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ ls
+README.md  test1.md  test2.md  test3.md  test4.md
+```
 
 
 
