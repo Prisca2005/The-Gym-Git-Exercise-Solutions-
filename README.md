@@ -125,4 +125,28 @@ $ git rebase --continue
 Successfully rebased and updated refs/heads/main.
 ```
 
+### Advanced Squashing
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)        
+$ git rebase -i HEAD~7
+[detached HEAD 1d6cf13] Create third and fourth files
+ Date: Tue Mar 4 16:39:25 2025 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+Successfully rebased and updated refs/heads/main.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)        
+$ git log --oneline
+1eb24ad (HEAD -> main) feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files
+```
+
+
+
 
