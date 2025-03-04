@@ -505,4 +505,151 @@ $ git log --graph --oneline --all
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
 $
 ```
+### Branching Reflogs
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)
+$ git reflog
+bbc4d33 (HEAD -> ft/branch) HEAD@{0}: commit: feat: Visualizing Commit History
+e7cbfba (origin/ft/branch) HEAD@{1}: checkout: moving from main to ft/branch
+ef1f445 (origin/main, main) HEAD@{2}: checkout: moving from ft/branch to main
+e7cbfba (origin/ft/branch) HEAD@{3}: commit: feat: Cherry-Picking Commits  
+e957c98 HEAD@{4}: checkout: moving from main to ft/branch
+ef1f445 (origin/main, main) HEAD@{5}: cherry-pick: Implemented test 5
+a76c677 HEAD@{6}: checkout: moving from ft/branch to main
+e957c98 HEAD@{7}: checkout: moving from main to ft/branch
+a76c677 HEAD@{8}: checkout: moving from ft/branch to main
+e957c98 HEAD@{9}: checkout: moving from main to ft/branch
+a76c677 HEAD@{10}: checkout: moving from ft/branch to main
+e957c98 HEAD@{11}: commit: Implemented test 5
+a76c677 HEAD@{12}: checkout: moving from main to ft/branch
+a76c677 HEAD@{13}: rebase (abort): returning to refs/heads/main
+1d6cf13 HEAD@{14}: rebase (start): checkout HEAD~7
+a76c677 HEAD@{15}: rebase (abort): returning to refs/heads/main
+726471c HEAD@{16}: rebase (start): checkout HEAD~6
+a76c677 HEAD@{17}: commit: Dropping a Commit
+248ba26 HEAD@{18}: rebase (finish): returning to refs/heads/main
+248ba26 HEAD@{19}: rebase (start): checkout HEAD~3
+5c45fc0 HEAD@{20}: commit: Unwanted commit
+248ba26 HEAD@{21}: commit: feat: Advanced Squashing
+1eb24ad HEAD@{22}: rebase (finish): returning to refs/heads/main
+1eb24ad HEAD@{23}: rebase (pick): feat:Splitting a Commit
+8c4ce62 HEAD@{24}: rebase (pick): chore: split the commit message
+7622a76 HEAD@{25}: rebase (pick): Restore README.md content
+f385a98 HEAD@{26}: rebase (pick): Restored README.md from previous commit  
+726471c HEAD@{27}: rebase (pick): feat: 1.missing file fix
+1d6cf13 HEAD@{28}: rebase (squash): Create third and fourth files
+574cc37 HEAD@{29}: rebase (start): checkout HEAD~7
+4f5129c HEAD@{30}: rebase (finish): returning to refs/heads/main
+4f5129c HEAD@{31}: rebase (start): checkout HEAD~3
+4f5129c HEAD@{32}: commit: feat:Splitting a Commit
+f032faa HEAD@{33}: rebase (finish): returning to refs/heads/main
+f032faa HEAD@{34}: rebase (continue): chore: split the commit message      
+5ef2493 HEAD@{35}: commit: Restore README.md content
+9c1da21 HEAD@{36}: rebase (continue): Restored README.md from previous commit
+97a1beb HEAD@{37}: rebase (continue): feat: 1.missing file fix
+3648f25 HEAD@{38}: commit: Create Fourth File
+574cc37 HEAD@{39}: commit: Create Third File
+4528dfb HEAD@{40}: reset: moving to HEAD~
+6bc01f8 HEAD@{41}: rebase: fast-forward
+4528dfb HEAD@{42}: rebase (start): checkout HEAD~5
+c9cc751 HEAD@{43}: rebase (finish): returning to refs/heads/main
+c9cc751 HEAD@{44}: rebase (start): checkout HEAD~4
+c9cc751 HEAD@{45}: rebase (abort): returning to refs/heads/main
+583cce0 HEAD@{46}: commit: chore: Create fourth file
+bcf33ba HEAD@{47}: commit: chore: Create third file
+4528dfb HEAD@{48}: reset: moving to head^
+6bc01f8 HEAD@{49}: rebase: fast-forward
+4528dfb HEAD@{50}: rebase (start): checkout 4528dfb
+c9cc751 HEAD@{51}: rebase (finish): returning to refs/heads/main
+c9cc751 HEAD@{52}: rebase (start): checkout HEAD~4
+c9cc751 HEAD@{53}: reset: moving to HEAD@{3}
+b58b1b3 HEAD@{54}: reset: moving to HEAD@{3}
+c9cc751 HEAD@{55}: reset: moving to HEAD@{3}
+94c6a66 HEAD@{56}: reset: moving to HEAD~3
+c9cc751 HEAD@{57}: reset: moving to HEAD@{1}
+b58b1b3 HEAD@{58}: reset: moving to HEAD~1
+c9cc751 HEAD@{59}: rebase (finish): returning to refs/heads/main
+c9cc751 HEAD@{60}: rebase (reword): feat: Keeping History Tidy - Squashing 
+Commits
+524b5b4 HEAD@{61}: rebase: fast-forward
+b58b1b3 HEAD@{62}: rebase (start): checkout HEAD~1
+524b5b4 HEAD@{63}: commit: Keeping History Tidy - Squashing Commits        
+b58b1b3 HEAD@{64}: rebase (finish): returning to refs/heads/main
+b58b1b3 HEAD@{65}: rebase (pick): Editing Commit History
+33703c9 HEAD@{66}: rebase (pick): restore README.md from previous commit   
+94c6a66 HEAD@{67}: rebase (pick): feat: 1.missing file fix
+6bc01f8 HEAD@{68}: rebase (pick): chore: Create third and fourth files     
+4528dfb HEAD@{69}: rebase (squash): chore: Combine initial and second files72a747b HEAD@{70}: rebase: fast-forward
+e062c99 HEAD@{71}: rebase (start): checkout e062c99e383947acad0448b92d561ca79092a2a8
+4a357eb HEAD@{72}: rebase (abort): returning to refs/heads/main
+72a747b HEAD@{73}: rebase: fast-forward
+bdf3b72 HEAD@{74}: rebase (start): checkout bdf3b721ba6cd0e09eacd5ca36faca34f4e31479
+4a357eb HEAD@{75}: rebase (finish): returning to refs/heads/main
+4a357eb HEAD@{76}: rebase (start): checkout HEAD~5
+4a357eb HEAD@{77}: rebase (abort): returning to refs/heads/main
+72a747b HEAD@{78}: rebase (start): checkout HEAD~5
+4a357eb HEAD@{79}: rebase (abort): returning to refs/heads/main
+72a747b HEAD@{80}: rebase (start): checkout HEAD~5
+4a357eb HEAD@{81}: rebase (finish): returning to refs/heads/main
+4a357eb HEAD@{82}: rebase (start): checkout HEAD~4
+4a357eb HEAD@{83}: rebase (finish): returning to refs/heads/main
+4a357eb HEAD@{84}: rebase (start): checkout HEAD~5
+4a357eb HEAD@{85}: rebase (finish): returning to refs/heads/main
+4a357eb HEAD@{86}: rebase (pick): Editing Commit History
+825358d HEAD@{87}: rebase (pick): restore README.md from previous commit   
+eff3536 HEAD@{88}: rebase (pick): feat: 1.missing file fix
+31ca19c HEAD@{89}: rebase (reword): chore: Create third and fourth files   
+a14b2dd HEAD@{90}: rebase: fast-forward
+86ef08b HEAD@{91}: rebase (start): checkout HEAD~4
+0ffdf88 HEAD@{92}: rebase (finish): returning to refs/heads/main
+0ffdf88 HEAD@{93}: rebase (pick): Editing Commit History
+a1d3a28 HEAD@{94}: rebase (pick): restore README.md from previous commit   
+1606ecd HEAD@{95}: rebase (pick): feat: 1.missing file fix
+a14b2dd HEAD@{96}: rebase (squash): # This is a combination of 2 commits.  
+5a197e4 HEAD@{97}: rebase (start): checkout HEAD~5
+26a114b HEAD@{98}: rebase (abort): returning to refs/heads/main
+5a197e4 HEAD@{99}: rebase (start): checkout HEAD~5
+26a114b HEAD@{100}: rebase (finish): returning to refs/heads/main
+26a114b HEAD@{101}: rebase (pick): Editing Commit History
+e7ec9b4 HEAD@{102}: rebase (squash): restore README.md from previous commitb692ef0 HEAD@{103}: rebase (start): checkout HEAD~3
+5be5bd9 HEAD@{104}: rebase (abort): returning to refs/heads/main
+b692ef0 HEAD@{105}: rebase (start): checkout HEAD~3
+5be5bd9 HEAD@{106}: rebase (finish): returning to refs/heads/main
+5be5bd9 HEAD@{107}: rebase (start): checkout HEAD~5
+5be5bd9 HEAD@{108}: rebase (finish): returning to refs/heads/main
+5be5bd9 HEAD@{109}: rebase (start): checkout HEAD~4
+5be5bd9 HEAD@{110}: rebase (abort): returning to refs/heads/main
+86ef08b HEAD@{111}: rebase (start): checkout HEAD~7
+bbc4d33 (HEAD -> ft/branch) HEAD@{0}: commit: feat: Visualizing Commit History
+e7cbfba (origin/ft/branch) HEAD@{1}: checkout: moving from main to ft/branch
+ef1f445 (origin/main, main) HEAD@{2}: checkout: moving from ft/branch to main
+e7cbfba (origin/ft/branch) HEAD@{3}: commit: feat: Cherry-Picking Commits  
+e957c98 HEAD@{4}: checkout: moving from main to ft/branch
+ef1f445 (origin/main, main) HEAD@{5}: cherry-pick: Implemented test 5      
+a76c677 HEAD@{6}: checkout: moving from ft/branch to main
+e957c98 HEAD@{7}: checkout: moving from main to ft/branch
+a76c677 HEAD@{8}: checkout: moving from ft/branch to main
+e957c98 HEAD@{9}: checkout: moving from main to ft/branch
+a76c677 HEAD@{10}: checkout: moving from ft/branch to main
+e957c98 HEAD@{11}: commit: Implemented test 5
+a76c677 HEAD@{12}: checkout: moving from main to ft/branch
+a76c677 HEAD@{13}: rebase (abort): returning to refs/heads/main
+1d6cf13 HEAD@{14}: rebase (start): checkout HEAD~7
+a76c677 HEAD@{15}: rebase (abort): returning to refs/heads/main
+726471c HEAD@{16}: rebase (start): checkout HEAD~6
+a76c677 HEAD@{17}: commit: Dropping a Commit
+248ba26 HEAD@{18}: rebase (finish): returning to refs/heads/main
+248ba26 HEAD@{19}: rebase (start): checkout HEAD~3
+5c45fc0 HEAD@{20}: commit: Unwanted commit
+248ba26 HEAD@{21}: commit: feat: Advanced Squashing
+1eb24ad HEAD@{22}: rebase (finish): returning to refs/heads/main
+1eb24ad HEAD@{23}: rebase (pick): feat:Splitting a Commit
+8c4ce62 HEAD@{24}: rebase (pick): chore: split the commit message
+7622a76 HEAD@{25}: rebase (pick): Restore README.md content
+f385a98 HEAD@{26}: rebase (pick): Restored README.md from previous commit  
+726471c HEAD@{27}: rebase (pick): feat: 1.missing file fix
+1d6cf13 HEAD@{28}: rebase (squash): Create third and fourth files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)
+```
 
