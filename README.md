@@ -80,3 +80,49 @@ To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 ```
 
+### Splitting a commit
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)        
+$ git rebase -i HEAD~5
+Stopped at 6bc01f8...  chore: Create third and fourth files
+You can amend the commit now, with
+
+  git commit --amend
+
+Once you are satisfied with your changes, run
+
+  git rebase --continue
+
+  user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|REBASE 1/5)
+$ git reset HEAD~
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|REBASE 1
+learning (main|REBASE 1/5)
+$ git add test3.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|REBASE 1
+learning (main|REBASE 1/5)
+$ git commit -m "Create Third File"
+[detached HEAD 574cc37] Create Third File
+ 1 file changed, 0 insertions(+), 0 deletions(-)    
+ create mode 100644 test3.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|REBASE 1
+learning (main|REBASE 1/5)
+$ git add test4.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|REBASE 1
+learning (main|REBASE 1/5)
+$ git commit -m "Create Fourth File"
+[detached HEAD 3648f25] Create Fourth File
+ 1 file changed, 0 insertions(+), 0 deletions(-)    
+ create mode 100644 test4.md
+
+ user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|REBASE 6/6)
+$ git rebase --continue
+[detached HEAD f032faa] chore: split the commit message
+ 1 file changed, 2 insertions(+), 6 deletions(-)
+Successfully rebased and updated refs/heads/main.
+```
+
+
