@@ -790,6 +790,7 @@ $ git commit -m "feat: Creating a Branch from a Commit"
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 $
 ```
+### Branch Renamin
 ```bash
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 $ git checkout ft/new-branch-from-commit
