@@ -636,3 +636,90 @@ user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 ```
 
 
+
+
+
+### Branch Deletion
+
+```bash
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git merge ft/new-feature
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|MERGING)    
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Changes to be committed:
+        new file:   feature.txt
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|MERGING)    
+$ git add README.md
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|MERGING)    
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   README.md
+        new file:   feature.txt
+
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|MERGING)    
+$ git add .
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|MERGING)    
+$ git commit -m "chore: merge ft/new-feature into main"
+[main 716ff1c] chore: merge ft/new-feature into main
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git merge ft/new-feature
+Already up to date.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git branch -d ft/new-feature
+Deleted branch ft/new-feature (was a5a4f7b).
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.13 KiB | 290.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+   c288a80..716ff1c  main -> main
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git push origin --delete ft/new-feature
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+ - [deleted]         ft/new-feature
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git branch -a
+  ft/branch
+* main
+  remotes/origin/ft/branch
+  remotes/origin/main
+
+```
