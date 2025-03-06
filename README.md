@@ -829,3 +829,53 @@ To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/improved-branch-name)
 $
 ```
+
+### Checking Out Detached HEAD
+```Bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning ((6d3e630...))
+$ touch experimental-file.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning ((6d3e630...))
+$ echo "This is an experimental change" > experimental-file.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning ((6d3e630...))
+$ git add experimental-file.txt
+warning: in the working copy of 'experimental-file.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning ((6d3e630...))
+$ git commit -m "Experimental change in detached HEAD"  
+HEAD detached from aa354a3
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning ((6d3e630...))    
+$ git checkout -b new-branch
+Switched to a new branch 'new-branch'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (new-branch)      
+$
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (new-branch)      
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        README.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (new-branch)      
+$ git add README.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (new-branch)
+$ git commit -m "feat: Renaming Branches"
+[new-branch 283f4a0] feat: Renaming Branches
+ 1 file changed, 1 insertion(+)
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (new-branch)      
+$
+```
+
+
