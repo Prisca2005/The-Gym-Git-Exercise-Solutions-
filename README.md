@@ -790,3 +790,46 @@ $ git commit -m "feat: Creating a Branch from a Commit"
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 $
 ```
+
+### Branch Rebasing
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-branch-from-commit)
+$ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-branch-from-commit)
+$ git log --oneline
+2ec0217 (HEAD -> ft/new-branch-from-commit, main) feat: Branch merging
+bc8f757 feat: Creating a Branch from a Commit
+239e621 Merge branch 'ft/new-branch-from-commit'
+d99c0e7 feat: Branch Deletion
+e4af6a7 feat: Branch Deletion
+716ff1c (origin/main) chore: merge ft/new-feature into main
+c2af31d (origin/ft/new-branch-from-commit) feat:Local vs. Remote Branches      
+c288a80 feat:Switching Back and Making More Changes
+ed98f03 Updated project readme
+a5a4f7b feat: Working on the Feature branch
+75eef11 Implemented core functionality for new feature
+b2d6831 feat: Feature Branch Creation
+759fdf2 (origin/ft/branch, ft/branch) feat: Understanding Reflogs
+bbc4d33 feat: Visualizing Commit History
+e7cbfba feat: Cherry-Picking Commits
+ef1f445 Implemented test 5
+e957c98 Implemented test 5
+a76c677 Dropping a Commit
+248ba26 feat: Advanced Squashing
+1eb24ad feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$
+```
