@@ -762,3 +762,31 @@ remote:
 To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
  * [new branch]      ft/new-branch-from-commit -> ft/new-branch-from-commit
 ```
+### Branch Merging
+```bash 
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-branch-fro
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git merge ft/new-branch-from-commit
+Auto-merging README.md
+ning (main|MERGING)
+$ git merge ft/new-branch-from-commit                   e result.
+Already up to date.
+$ git merge ft/new-branch-from-commit                   ning (main|MERGING)
+Already up to date.
+Already up to date.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)ning (main)
+$ git add README.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git commit -m "feat: Creating a Branch from a Commit"
+[main bc8f757] feat: Creating a Branch from a Commit
+ 1 file changed, 42 insertions(+)
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$
+```
