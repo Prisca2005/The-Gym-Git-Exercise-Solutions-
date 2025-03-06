@@ -790,3 +790,41 @@ $ git commit -m "feat: Creating a Branch from a Commit"
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 $
 ```
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-branch-from-commit)
+$ git branch -m ft/improved-branch-name
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/improved-branch-name)
+$ git branch
+  ft/branch
+* ft/improved-branch-name
+  main
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/improved-branch-name)
+$ git push origin --delete ft/new-branch-from-commit
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+ - [deleted]         ft/new-branch-from-commit
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/improved-branch-name)
+$ git push origin ft/improved-branch-name
+Enumerating objects: 19, done.
+Counting objects: 100% (19/19), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (15/15), 2.47 KiB | 505.00 KiB/s, done.
+Total 15 (delta 10), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (10/10), completed with 2 local objects.        
+remote:
+remote: Create a pull request for 'ft/improved-branch-name' on GitHub by visiting:
+remote:      https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-/pull/new/ft/improved-branch-name
+remote:
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+ * [new branch]      ft/improved-branch-name -> ft/improved-branch-name        
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/improved-branch-name)
+$
+```
