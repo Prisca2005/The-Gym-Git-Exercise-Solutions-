@@ -720,3 +720,45 @@ $ git branch -a
   remotes/origin/main
 
 ```
+
+### Creating a Branch from a Commit
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git log --oneline
+716ff1c (HEAD -> main, origin/main) chore: merge ft/new-feature into main
+c2af31d feat:Local vs. Remote Branches
+
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git checkout -b ft/new-branch-from-commit c2af31d
+Switched to a new branch 'ft/new-branch-from-commit'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-branch-from-commit)
+$ git log --oneline
+c2af31d (HEAD -> ft/new-branch-from-commit) feat:Local vs. Remote Branches
+c288a80 feat:Switching Back and Making More Changes
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-branch-from-commit)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git push 
+Everything up-to-date
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-branch-from-commit)
+$ git push origin ft/new-branch-from-commit
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'ft/new-branch-from-commit' on GitHub by visiting:
+remote:      https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-/pull/new/ft/new-branch-from-commit
+remote:
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+ * [new branch]      ft/new-branch-from-commit -> ft/new-branch-from-commit
+```
