@@ -922,3 +922,51 @@ f385a98 Restored README.md from previous commit
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 $
 ```
+
+## Part3: Advanced Workflows
+
+### Stashing Changes
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")        
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
+$ git stash
+Saved working directory and index state WIP on main: c79ca3d chore: resolve merge conflicts
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
+$ git stash list
+stash@{0}: WIP on main: c79ca3d chore: resolve merge conflicts
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
+$ git stash pop
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)  
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")        
+Dropped refs/stash@{0} (77bba6396e8e5b09bd3870f93b5c67c0c4127768)        
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
+$
+```
