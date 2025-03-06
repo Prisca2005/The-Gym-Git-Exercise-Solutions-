@@ -953,7 +953,10 @@ On branch main
 Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
+```
+### Retrieving Stashed Changes
 
+```bash
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
 $ git stash pop
 On branch main
