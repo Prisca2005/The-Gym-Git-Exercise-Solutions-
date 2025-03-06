@@ -216,6 +216,7 @@ user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)
 $ echo "This is test 5" > test5.md
 warning: in the working copy of 'test5.md', LF will 
 be replaced by CRLF the next time Git touches it    learning (ft/branch)
+<<<<<<< HEAD
 
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands be replaced by CRLF the
 learning (ft/branch)
@@ -634,5 +635,363 @@ Already up to date.
 
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 ```
+=======
+>>>>>>> ft/new-feature
 
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands be replaced by CRLF the
+learning (ft/branch)
+$ git commit -m "Implemented test 5"
+[ft/branch e957c98] Implemented test 5              learning (ft/branch)   
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (ft/branch)
+$ git checkout main                                 learning (ft/branch)   
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.       
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git log --oneline
+a76c677 (HEAD -> main, origin/main) Dropping a Commit
+248ba26 feat: Advanced Squashing
+1eb24ad feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit     
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files     
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ ls
+README.md  test1.md  test2.md  test3.md  test4.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git checkout ft/branch
+Switched to branch 'ft/branch'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (ft/branch)
+$ ls
+README.md  test2.md  test4.md
+test1.md   test3.md  test5.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.       
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git checkout ft/branch
+Switched to branch 'ft/branch'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (ft/branch)
+$ git log --oneline
+e957c98 (HEAD -> ft/branch) Implemented test 5
+a76c677 (origin/main, main) Dropping a Commit       
+248ba26 feat: Advanced Squashing
+1eb24ad feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit     
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files     
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (ft/branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.       
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git cherry-pick e957c98
+[main ef1f445] Implemented test 5
+ Date: Tue Mar 4 18:39:53 2025 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git log --oneline
+ef1f445 (HEAD -> main) Implemented test 5
+a76c677 (origin/main) Dropping a Commit
+248ba26 feat: Advanced Squashing
+1eb24ad feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit     
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files     
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ ls
+README.md  test2.md  test4.md
+test1.md   test3.md  test5.md
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ cat test5.md
+This is test 5
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands 
+learning (main)
+$ git checkout ft/branch
+Switched to branch 'ft/branch'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$ git log --oneline
+e957c98 (HEAD -> ft/branch) Implemented test 5
+a76c677 (origin/main) Dropping a Commit
+248ba26 feat: Advanced Squashing
+1eb24ad feat:Splitting a Commit
+8c4ce62 chore: split the commit message
+7622a76 Restore README.md content
+f385a98 Restored README.md from previous commit
+726471c feat: 1.missing file fix
+1d6cf13 Create third and fourth files
+4528dfb chore: Combine initial and second files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$
+```
+### Visualizing Commit History (Bonus)
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$ git log --graph
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+|     Dropping a Commit
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origin/ft/branch)
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+|
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origin/ft/branch)
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:56:24 2025 +0200
+|
+|     feat: Cherry-Picking Commits
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+|
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+* commit 248ba26839c8615838ba71d95907fdb8af9422a5
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:45:00 2025 +0200
+|
+|     feat: Advanced Squashing
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origin/ft/branch)
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:56:24 2025 +0200
+|
+|     feat: Cherry-Picking Commits
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+|
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+* commit 248ba26839c8615838ba71d95907fdb8af9422a5
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:45:00 2025 +0200
+|
+|     feat: Advanced Squashing
+|
+* commit 1eb24ad5a6882df3b13ab69bb265e250a2e79208
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:31:05 2025 +0200
+:...skipping...
+* commit e7cbfba202e1c38a7238a0855b1aa5e505228210 (HEAD -> ft/branch, origi
+n/ft/branch)
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:56:24 2025 +0200    
+|
+|     feat: Cherry-Picking Commits
+|
+* commit e957c989eb1d3a026051ca786b0f5187fe3ab630
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:39:53 2025 +0200
+|
+|     Implemented test 5
+| 
+* commit a76c6778e56443b3d3dbb998f21bd66e133300c6
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 18:01:39 2025 +0200
+|
+|     Dropping a Commit
+|
+* commit 248ba26839c8615838ba71d95907fdb8af9422a5
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:45:00 2025 +0200
+|
+|     feat: Advanced Squashing
+|
+* commit 1eb24ad5a6882df3b13ab69bb265e250a2e79208
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:31:05 2025 +0200
+|
+|     feat:Splitting a Commit
+|
+* commit 8c4ce62988424f1d1c0a79fc9652c0fe57649459
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Mon Mar 3 11:56:52 2025 +0200
+|
+|     chore: split the commit message
+|
+* commit 7622a76a8eda8ba0f3bdf9ae1049f7315053547a
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 17:08:23 2025 +0200
+|
+|     Restore README.md content
+|
+* commit f385a98fa0ae6598238013acea105899230c801f
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Fri Feb 28 14:39:18 2025 +0200
+|
+|     Restored README.md from previous commit
+|
+* commit 726471c5a773239d03050fcab1aae898dc38907d
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Fri Feb 28 12:34:59 2025 +0200
+|
+|     feat: 1.missing file fix
+|
+* commit 1d6cf135bda7fae60edb7dc2c814d441ee0a8b20
+| Author: prisca <priscamasereli@gmail.com>
+| Date:   Tue Mar 4 16:39:25 2025 +0200
+|
+|     Create third and fourth files
+|
+* commit 4528dfba1c85f628d8b5b421895a2ae8a9cf59e7
+  Author: prisca <priscamasereli@gmail.com>
+  Date:   Fri Feb 28 12:19:34 2025 +0200
+
+      chore: Combine initial and second files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$ git log --graph --oneline --all
+* e7cbfba (HEAD -> ft/branch, origin/ft/branch) feat: Cherry-Picking Commits
+* e957c98 Implemented test 5
+| * ef1f445 (origin/main, main) Implemented test 5
+|/
+* a76c677 Dropping a Commit
+* 248ba26 feat: Advanced Squashing
+* 1eb24ad feat:Splitting a Commit
+* 8c4ce62 chore: split the commit message
+* 7622a76 Restore README.md content
+* f385a98 Restored README.md from previous commit
+* 726471c feat: 1.missing file fix
+* 1d6cf13 Create third and fourth files
+* 4528dfb chore: Combine initial and second files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$
+```
+### Understanding Reflogs
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)
+$ git reflog
+Commits
+e957c98 HEAD@{4}: checkout: moving from main to ft/branch
+ef1f445 (origin/main, main) HEAD@{5}: cherry-pick: Implemented test 5      
+a76c677 HEAD@{6}: checkout: moving from ft/branch to main
+e957c98 HEAD@{7}: checkout: moving from main to ft/branch
+a76c677 HEAD@{8}: checkout: moving from ft/branch to main
+e957c98 HEAD@{9}: checkout: moving from main to ft/branch
+a76c677 HEAD@{10}: checkout: moving from ft/branch to main
+e957c98 HEAD@{11}: commit: Implemented test 5
+a76c677 HEAD@{12}: checkout: moving from main to ft/branch
+a76c677 HEAD@{13}: rebase (abort): returning to refs/heads/main
+1d6cf13 HEAD@{14}: rebase (start): checkout HEAD~7
+a76c677 HEAD@{15}: rebase (abort): returning to refs/heads/main
+726471c HEAD@{16}: rebase (start): checkout HEAD~6
+a76c677 HEAD@{17}: commit: Dropping a Commit
+248ba26 HEAD@{18}: rebase (finish): returning to refs/heads/main
+248ba26 HEAD@{19}: rebase (start): checkout HEAD~3
+5c45fc0 HEAD@{20}: commit: Unwanted commit
+248ba26 HEAD@{21}: commit: feat: Advanced Squashing
+1eb24ad HEAD@{22}: rebase (finish): returning to refs/heads/main
+1eb24ad HEAD@{23}: rebase (pick): feat:Splitting a Commit
+8c4ce62 HEAD@{24}: rebase (pick): chore: split the commit message
+7622a76 HEAD@{25}: rebase (pick): Restore README.md content
+f385a98 HEAD@{26}: rebase (pick): Restored README.md from previous commit  
+726471c HEAD@{27}: rebase (pick): feat: 1.missing file fix
+1d6cf13 HEAD@{28}: rebase (squash): Create third and fourth files
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)
+```
+## Part 2: Branching Basics
+### Feature Branching creation
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/branch)   
+$ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ git branch
+  ft/branch
+* ft/new-feature
+  main
+
+```
+### Working on the Feature Branch
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ touch feature.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ echo "This is the core functionality for the new feature" > feature.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ git add feature.txt
+warning: in the working copy of 'feature.txt', LF will be replaced by CRLF 
+the next time Git touches it
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+$ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 75eef11] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/new-feature)
+```
 
