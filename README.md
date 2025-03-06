@@ -612,4 +612,27 @@ f385a98 Restored README.md from previous commit
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 ```
 
+### Local vs. Remote Branches:
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 3.47 KiB | 1.16 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+   ed98f03..c288a80  main -> main
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git pull origin main
+From https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+```
+
 
