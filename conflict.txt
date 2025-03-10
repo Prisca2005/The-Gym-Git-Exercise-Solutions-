@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-This is the main branch change
-=======
-This is resolving conflincts with merge tool
->>>>>>> ft/conflict-branch
+This is the feature branch change
