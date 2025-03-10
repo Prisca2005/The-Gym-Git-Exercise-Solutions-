@@ -973,3 +973,97 @@ Dropped refs/stash@{0} (77bba6396e8e5b09bd3870f93b5c67c0c4127768)
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
 $
 ```
+### Branch Merging Conflicts (Continued)
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)      
+$ git checkout -b ft/conflict-branch
+Switched to a new branch 'ft/conflict-branch'
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/conflict-branch)
+$ echo "This is the feature branch change" > conflict.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/conflict-branch)
+$ git add conflict.txt
+warning: in the working copy of 'conflict.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/conflict-branch)
+$ git commit -m "Add feature branch changes to conflict.txt"
+[ft/conflict-branch cf67c45] Add feature branch changes to conflict.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (ft/conflict-branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ echo "This is the main branch change" > conflict.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git add conflict.txt
+warning: in the working copy of 'conflict.txt', LF will be replaced by CRLF the next time Git touches it
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git commit -m "Add main branch changes to conflict.txt"
+[main f882212] Add main branch changes to conflict.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 conflict.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git merge ft/conflict-branch
+Auto-merging conflict.txt
+CONFLICT (add/add): Merge conflict in conflict.txt
+Automatic merge failed; fix conflicts and then commit the result.    
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main|MERGING)
+$ git status
+
+You have unmerged paths.                      mit.
+  (fix conflicts and run "git commit")        s)
+  (use "git merge --abort" to abort the merge)
+
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both added:      conflict.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")                           or "git commit -a")
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git add conflict.txt
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git commit -m "feat: resolving merge conflicts"
+[main 0b92bd8] feat: resolving merge conflicts 1 file changed, 3 insertions(+), 3 deletions(-)
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git log --oneline
+0b92bd8 (HEAD -> main) feat: resolving merge conflicts
+ea66364 Merge branch 'ft/conflict-branch'     
+f882212 Add main branch changes to conflict.txt
+cf67c45 (ft/conflict-branch) Add feature branch changes to conflict.txt
+9bdf4d7 (origin/main) feat: Retrieving Stashed Changes
+98e1e3a feat: Stashing Changes
+c79ca3d chore: resolve merge conflicts
+ef04258 Merge new-branch with main
+0827fbd Merge ft/improved-branch-name into main
+09f5229 (origin/new-branch, new-branch) feat: 
+Checking Out Detached HEAD
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git push origin main
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads       
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (12/12), 1.12 KiB | 229.00 KiB/s, done.
+Total 12 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 1 local object.
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
+   9bdf4d7..0b92bd8  main -> main
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$
+```
