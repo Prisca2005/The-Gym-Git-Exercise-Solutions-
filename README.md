@@ -1174,3 +1174,21 @@ $ git tag
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
 $
 ```
+### Pushing Local Work to Remote Repositories
+
+```bash 
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git push origin main
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (21/21), 2.69 KiB | 183.00 KiB/s, done.
+Total 21 (delta 11), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (11/11), completed with 2 local objects.
+To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git 
+   9c15737..77aca2e  main -> main
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$
+```
