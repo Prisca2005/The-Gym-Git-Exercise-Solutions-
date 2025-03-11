@@ -1123,3 +1123,34 @@ $ git commit -m "Added .gitignore to exclude temp files"
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
 $
 ```
+### Working with tags
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git tag v1.0
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git tag
+v1.0
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git show v1.0
+commit 2d0f3704680877f6021ac2ac9a12167331f99aa3 (HEAD -> main, tag: v1.0)
+Author: prisca <priscamasereli>
+Date:   Tue Mar 11 23:12:48 2025 +0200
+
+Author: prisca <priscamasereli>
+Date:   Tue Mar 11 23:12:48 2025 +0200
+
+    feat: Ignoring Files/Directories
+
+diff --git a/README.md b/README.md
+index 604d304..c8ca019 100644
+--- a/README.md
++++ b/README.md
+@@ -1099,6 +1099,27 @@ Switched to branch 'main'
+ Your branch is ahead of 'origin/main' by 2 commits.
+   (use "git push" to publish your local commits)
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$
+```
