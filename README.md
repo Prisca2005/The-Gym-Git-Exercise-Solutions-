@@ -1192,3 +1192,14 @@ To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
 $
 ```
+### Pulling Changes from Remote Repositories
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git pull origin main
+From https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$
+```
