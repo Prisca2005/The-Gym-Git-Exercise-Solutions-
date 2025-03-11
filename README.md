@@ -1154,3 +1154,23 @@ index 604d304..c8ca019 100644
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
 $
 ```
+### Listing and Deleting Tags
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git tag
+v1.0
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git tag -n
+v1.0            feat: Ignoring Files/Directories
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git tag -d v1.0
+Deleted tag 'v1.0' (was 2d0f370)
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git tag
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$
+```
