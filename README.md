@@ -1067,3 +1067,38 @@ To https://github.com/Prisca2005/The-Gym-Git-Exercise-Solutions-.git
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
 $
 ```
+### Understanding Detached HEAD state
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$ git checkout 6d3e630
+Note: switching to '6d3e630'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in 
+this
+state without impacting any branches by switching back to a branch.  
+
+If you want to create a new branch to retain commits you create, you 
+may
+do so (now or later) by using -c with the switch command. Example:   
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6d3e630 Experimental change in detached HEAD
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning ((6d3e630...))
+$ git checkout main
+Previous HEAD position was 6d3e630 Experimental change in detached HEAD
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$
+```
