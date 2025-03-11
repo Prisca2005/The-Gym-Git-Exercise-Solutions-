@@ -1102,3 +1102,24 @@ Your branch is ahead of 'origin/main' by 2 commits.
 user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
 $
 ```
+### Ignoring Files/Directories
+```bash
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git add .gitignore
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git commit -m "Added .gitignore to exclude temp files"
+[main 99d1583] Added .gitignore to exclude tem$ git add .gitignore
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)
+$ git commit -m "Added .gitignore to exclude temp files"
+[main 99d1583] Added .gitignore to exclude temmands learning (main)
+$ git commit -m "Added .gitignore to exclude temp files"
+[main 99d1583] Added .gitignore to exclude tem$ git commit -m "Added .gitignore to exclude temp files"
+[main 99d1583] Added .gitignore to exclude tem[main 99d1583] Added .gitignore to exclude temp files
+ 1 file changed, 2 insertions(+)
+ create mode 100644 .gitignore
+
+user@PRISCA-DESKTOP MINGW64 /f/THE GYM/git commands learning (main)  
+$
+```
